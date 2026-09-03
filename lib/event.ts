@@ -4,10 +4,10 @@ export const event = {
   schoolNameEn: "HIROSHIMA JOHOKU JUNIOR & SENIOR HIGH SCHOOL",
   reunionName: "第43回 同窓会",
   reunionNumber: "43",
-  catchphrase: "集え、健男児",
+  catchphrase: "集え、城北健男児",
   tagline: "男子校。そして今夜も、男しかいない。",
   subTagline: "老けたな。そう思ったあなたも同じです。",
-  dateLabel: "2026年10月3日（土）",
+  dateLabel: "2027年10月2日（土）",
   timeLabel: "総会 18:30〜 / 懇親会 19:00〜",
   venueName: "リーガロイヤルホテル広島",
   venueAddress: "〒730-0011 広島市中区基町6-78",
@@ -22,6 +22,21 @@ export const event = {
   tel: "082-229-0111",
   fax: "082-229-0112",
   email: "dousoukai@hiroshimajohoku.ed.jp",
+  nav: [
+    { href: "#guide", label: "ご案内" },
+    { href: "#overview", label: "開催概要" },
+    { href: "#teachers", label: "先生" },
+    { href: "#album", label: "アルバム" },
+    { href: "#stories", label: "参加の声" },
+    { href: "#program", label: "当日の流れ" },
+    { href: "#souvenir", label: "お土産" },
+    { href: "#directory", label: "仕事名鑑" },
+    { href: "#live", label: "ライブ中継" },
+    { href: "#payment", label: "お支払い" },
+    { href: "#apply", label: "申し込み" },
+    { href: "#faq", label: "FAQ" },
+    { href: "#contact", label: "お問い合わせ" },
+  ],
   program: [
     {
       time: "18:00",
@@ -32,31 +47,74 @@ export const event = {
       time: "18:30",
       title: "総会",
       detail: "会則・会計報告など、同窓会の定例議事を短時間で行います。",
+      modal: [
+        "同窓会会則の確認、前年度の活動報告、会計報告など、定例の議事を行います。",
+        "進行は短時間を予定しています。資料は当日、受付にてお渡しします。",
+        "ご質問がある場合は、総会の最後にご発言ください。確定次第、この内容は更新します。",
+      ],
     },
     {
       time: "18:40",
       title: "校歌斉唱",
-      detail: "全員で校歌を斉唱します。歌詞はこのページに掲載しています。",
+      detail: "全員で校歌を斉唱します。歌詞は詳細からご覧ください。",
+      song: true,
+      modal: [
+        "総会のあと、全員で校歌を斉唱します。作詞は山崎幹夫、作曲は太田司朗です。",
+        "歌詞カードは受付でもお渡しする予定です。",
+        "進行はダミーの案です。国歌斉唱の有無を含め、確定次第このページを更新します。",
+      ],
     },
     {
       time: "18:50",
       title: "先生からのありがたいお言葉",
       detail: "当日ご出席の先生方から、在校当時を振り返るご挨拶をいただきます。",
+      modal: [
+        "当日ご出席の先生方から、在校当時を振り返るご挨拶をいただきます。",
+        "学年主任、部活顧問、進路指導など、当時お世話になった先生方が席に着く予定です。",
+        "お時間の都合により、ご挨拶は代表の先生方となる場合があります。",
+      ],
+    },
+    {
+      time: "18:55",
+      title: "部活活動報告",
+      detail: "成果のあった部活を、顧問・校長、または部長の現役生が報告します。",
+      modal: [
+        "成果のあった部活の活動報告を、顧問、校長、または部長の生徒からしてもらいます。",
+        "現役生が会場に混ざるのは、意外とサプライズで嬉しいはずです。",
+        "登壇する部活と顔ぶれは、確定次第このページでご案内します。",
+      ],
     },
     {
       time: "19:00",
       title: "懇親会 開宴・乾杯",
       detail: "司会進行のもと開宴し、代表者の発声で乾杯します。",
+      modal: [
+        "司会進行のもと開宴し、代表者の発声で乾杯します。",
+        "会費には当日の飲食が含まれます。席はクラス・年代を混ぜてご案内する予定です。",
+        "席次の詳細は当日、受付でご確認ください。",
+      ],
     },
     {
       time: "19:20",
       title: "マグロ解体ショー",
       detail: "会場中央でマグロの解体実演を行います。切り分けたマグロは各卓へご提供します。",
+      modal: [
+        "会場中央でマグロの解体実演を行います。切り分けたマグロは各卓へご提供します。",
+        "実演中は会場スタッフの案内に従ってください。開始時刻は進行の都合で前後する場合があります。",
+        "食物アレルギーがある方は、受付までお知らせください。",
+      ],
     },
     {
       time: "19:50",
       title: "歓談",
       detail: "クラス・部活・仕事の垣根を越えて、自由に席を回ってください。",
+    },
+    {
+      time: "20:10",
+      title: "ゴッホ向井ブルー お笑いライブ",
+      detail:
+        "ピン芸人／カープ芸人のゴッホ向井ブルーによるお笑いライブです。詳細からプロフィールをご覧ください。",
+      guest: true,
     },
     {
       time: "20:40",
@@ -70,11 +128,23 @@ export const event = {
     },
   ],
   payments: [
-    { name: "クレジットカード決済", note: "事前申し込み" },
-    { name: "コンビニ決済", note: "事前申し込み" },
-    { name: "銀行振込", note: "事前申し込み" },
-    { name: "PayPay決済", note: "事前申し込み" },
     {
+      kind: "card",
+      name: "クレジットカード決済",
+      note: "事前申し込み",
+      detail:
+        "Visa、Mastercard、JCB、American Express、Diners Club、Discover、銀聯など、Stripeが扱うすべてのカードブランドが使えます。",
+    },
+    {
+      kind: "konbini",
+      name: "コンビニ決済",
+      note: "事前申し込み",
+      detail: "ファミリーマート、ローソン、ミニストップ、セイコーマートで支払いできます。",
+    },
+    { kind: "bank", name: "銀行振込", note: "事前申し込み" },
+    { kind: "paypay", name: "PayPay決済", note: "事前申し込み" },
+    {
+      kind: "cash",
       name: "当日現金決済",
       note: "税込10,000円。事前申し込みより2,000円高くなります。",
     },
@@ -96,6 +166,27 @@ export const event = {
       body: "地元に戻る話をしていたら、「うちで人を探している」と隣から声がかかった。求人サイトより早い。同窓会は、いちばん距離の近い紹介の場でした。",
     },
   ],
+  guest: {
+    name: "ゴッホ向井ブルー",
+    reading: "ゴッホむかいブルー",
+    realName: "向井 浩志",
+    role: "ピン芸人／カープ芸人",
+    birth: "1990年2月22日",
+    hometown: "広島県大竹市",
+    image: "/images/profile/gogh-mukai-blue.webp",
+    imageWidth: 640,
+    imageHeight: 868,
+    teaser:
+      "広島県大竹市出身のピン芸人、カープ芸人です。アメトーーク「カープ芸人」で知られ、広島のテレビ・ラジオでレギュラーを務めています。写真を押すと、プロフィールと経歴が開きます。",
+    body: "広島県大竹市出身。ピン芸人、カープ芸人として活動しています。アメトーーク「カープ芸人」で知られ、いまは広島のテレビ・ラジオでレギュラーを務めています。",
+    career: [
+      "2010年、ピン芸人として活動開始。NSC東京校14期",
+      "アメトーーク「カープ芸人」「定時制高校芸人」出演",
+      "広島ホームテレビ『5up!』木曜レギュラー",
+      "広島FM『アラウンドカープX』レギュラー",
+      "2021年、大竹市「大好き大竹応援大使」第1号",
+    ],
+  },
   teachers: [
     {
       role: "当時の学年主任",
@@ -117,6 +208,20 @@ export const event = {
     title: "校歌",
     lyricist: "山崎幹夫",
     composer: "太田司朗",
+    images: [
+      {
+        src: "/images/gallery/koka-lyrics.png",
+        alt: "広島城北高等学校 校歌の歌詞",
+        width: 703,
+        height: 357,
+      },
+      {
+        src: "/images/gallery/koka-callig.png",
+        alt: "広島城北高等学校 校歌の直筆",
+        width: 950,
+        height: 460,
+      },
+    ],
     verses: [
       [
         "眼下にかすむ太田川",
@@ -138,36 +243,165 @@ export const event = {
       ],
     ],
   },
-  gallery: [
-    {
-      src: "/images/gallery/campus-01.jpg",
-      alt: "広島城北中・高等学校の校舎外観",
-      caption: "校舎",
-      width: 701,
-      height: 466,
+  album: {
+    kicker: "ALBUM",
+    title: "過去の写真アルバム",
+    lead: "杯を上げた夜、隣の席の顔。過去の同窓会の空気です。",
+    note: "掲載はイメージです。実写真が集まり次第、差し替えます。写真を押すと拡大します。",
+    photos: [
+      {
+        src: "/images/gallery/reunion/party-toast.jpg",
+        alt: "懇親会でグラスを合わせる様子",
+        caption: "乾杯",
+        width: 1600,
+        height: 1108,
+      },
+      {
+        src: "/images/gallery/reunion/table.jpg",
+        alt: "テーブルを囲んで歓談する様子",
+        caption: "歓談",
+        width: 1600,
+        height: 1067,
+      },
+      {
+        src: "/images/gallery/reunion/banquet.jpg",
+        alt: "同窓会の宴席の様子",
+        caption: "宴席",
+        width: 1600,
+        height: 1068,
+      },
+      {
+        src: "/images/gallery/reunion/dinner.jpg",
+        alt: "懇親会の会食の様子",
+        caption: "会食",
+        width: 1600,
+        height: 1067,
+      },
+      {
+        src: "/images/gallery/reunion/restaurant.jpg",
+        alt: "懇親会の会場の様子",
+        caption: "会場",
+        width: 1600,
+        height: 1067,
+      },
+      {
+        src: "/images/gallery/reunion/toast.jpg",
+        alt: "宴席のテーブルセッティング",
+        caption: "テーブル",
+        width: 1600,
+        height: 1068,
+      },
+      {
+        src: "/images/gallery/reunion/cheers.jpg",
+        alt: "グラスを傾ける様子",
+        caption: "一杯",
+        width: 1600,
+        height: 1069,
+      },
+      {
+        src: "/images/gallery/reunion/hotel-dinner.jpg",
+        alt: "懇親会の席の様子",
+        caption: "席",
+        width: 1600,
+        height: 1200,
+      },
+    ],
+  },
+  livestream: {
+    kicker: "LIVE",
+    title: "行けなくても安心！",
+    headline: "無料で見られるライブ中継（おひねりしてね）",
+    lead: "席に座れない夜でも、画面の向こうで杯は上げられる。",
+    body: "当日は YouTube Live で会場の様子を流します。一般公開はしません。リンクは城北の人間にしか配りません。見るのはタダです。ただし、気持ちが動いたらおひねりしてね。",
+    note: "配信URLは当日、このページと案内メールでお知らせします。",
+    points: [
+      {
+        title: "閲覧は無料",
+        body: "申し込みも会費もいりません。届いたURLを開くだけです。遠方でも、仕事でも、家庭でも、夜には参加できます。",
+      },
+      {
+        title: "当日は非公開配信",
+        body: "YouTube Live を限定公開で行います。検索では出てきません。URLは当日、このページと案内メールで城北関係者にだけ渡します。",
+      },
+      {
+        title: "おひねりしてね",
+        body: "タダ見で構いません。でも、画面の向こうで杯を上げるなら、Super Chat などの投げ銭で気持ちを届けてください。金額はお気持ちで。",
+      },
+    ],
+  },
+  souvenir: {
+    kicker: "SOUVENIR",
+    title: "当日のお土産",
+    lead: "袋の中には、吉川商店の日本酒と、あなたのビジネス情報を入れます。",
+    body: "500名の城北生が持ち帰る袋です。酒は城北卒業生の店から。チラシは、仕事名鑑に協賛いただいたみなさんの分を同梱します。",
+    items: [
+      {
+        title: "吉川商店の日本酒",
+        body: "安芸高田市・甲立駅前の酒屋から届きます。創業100年を超える店で、城北の卒業生が営んでいます。詳細から店のプロフィールをご覧ください。",
+        shop: true,
+      },
+      {
+        title: "あなたのビジネス情報",
+        body: "仕事名鑑に協賛いただくと、チラシをお土産袋に載せます。ロビーのポスター、名刺、当日の卓番号も掲載できます。",
+      },
+    ],
+    cta: "仕事名鑑に載せる",
+    shop: {
+      name: "株式会社吉川商店",
+      reading: "きっかわしょうてん",
+      role: "酒屋／城北卒業生",
+      alumniLabel: "広島城北高等学校 卒業生",
+      hometown: "広島県安芸高田市甲田町",
+      address: "〒739-1101 広島県安芸高田市甲田町高田原1372",
+      hours: "8:00〜20:00",
+      tel: "0826-45-2036",
+      fax: "0826-45-2071",
+      website: "https://kikkawa-shoten.com/",
+      image: "/images/profile/kikkawa-shoten.png",
+      imageWidth: 1024,
+      imageHeight: 449,
+      orientation: "landscape",
+      careerLabel: "沿革",
+      teaser:
+        "当日のお土産の日本酒は、ここから届きます。安芸高田市・甲立駅前、創業100年超。城北の卒業生が営む酒屋です。",
+      body: "芸備線が開通した年に甲立駅前へ開店し、いまも駅の隣で酒を商っています。広島の地酒と郷土の物産、国内外の酒類を揃え、店主の吉川正行さんが酒専門店としてのこだわりを続けています。第43回同窓会のお土産の日本酒も、ここの一本です。",
+      career: [
+        "1919年、吉川商店 甲立駅前分店を開業",
+        "1965年、株式会社吉川商店を設立。代表取締役 吉川 正行",
+        "1994年、店舗を増築",
+        "酒専門店として、地酒・郷土物産・良心価格を掲げる",
+        "吉川恵理子さん（ソムリエール）、吉川礼奈さん（ホームページ・SNS）も店を支える",
+      ],
     },
-    {
-      src: "/images/gallery/campus-02.jpg",
-      alt: "広島城北中・高等学校の中庭",
-      caption: "中庭",
-      width: 630,
-      height: 450,
-    },
-    {
-      src: "/images/gallery/campus-official.jpg",
-      alt: "広島城北中・高等学校のキャンパス",
-      caption: "キャンパス",
-      width: 644,
-      height: 430,
-    },
-    {
-      src: "/images/gallery/life-01.jpg",
-      alt: "広島城北中・高等学校の学び舎",
-      caption: "学び舎",
-      width: 1500,
-      height: 625,
-    },
-  ],
+  },
+  directory: {
+    kicker: "DIRECTORY",
+    title: "城北卒業生の仕事名鑑",
+    lead: "1万円で、500名の城北生にあなたのビジネスを宣伝できます。",
+    body: "お土産袋にチラシを同梱します。ロビーのポスター、名刺、当日の卓番号も掲載できます。",
+    fee: 10000,
+    feeLabel: "税別",
+    cta: "協賛したい方は、事務局までご相談ください",
+    mailSubject: "【第43回同窓会】仕事名鑑の協賛について",
+    points: [
+      {
+        title: "500名への案内",
+        body: "1万円（税別）で、約500名の城北生に事業を宣伝できます。",
+      },
+      {
+        title: "お土産袋に同梱",
+        body: "吉川商店の日本酒と同じ袋に、あなたのチラシを入れます。",
+      },
+      {
+        title: "ロビーのポスター",
+        body: "事業内容を書いた大きなポスターを掲載します。名刺や、今日どこの卓にいるかも書いておけます。",
+      },
+      {
+        title: "リモート参加も可",
+        body: "当日来られない方も展示できます。内容は後日、このサイトで報告します。",
+      },
+    ],
+  },
   faqs: [
     {
       q: "いつから申し込めますか？",
@@ -179,11 +413,15 @@ export const event = {
     },
     {
       q: "支払い方法は？",
-      a: "クレジットカード、コンビニ決済、銀行振込、PayPay、当日現金に対応予定です。当日現金のみ税込10,000円になります。",
+      a: "クレジットカード（Visa、Mastercard、JCB、American Express、Diners Club、Discover、銀聯ほかStripe対応の全ブランド）、コンビニ決済、銀行振込、PayPay、当日現金に対応予定です。当日現金のみ税込10,000円になります。",
     },
     {
       q: "会場はどこですか？",
       a: "リーガロイヤルホテル広島（広島市中区基町6-78）です。",
+    },
+    {
+      q: "会場に行けません。配信はありますか？",
+      a: "当日、非公開の YouTube Live を予定しています。閲覧は無料です。リンクは当日このページでご案内します。おひねり大歓迎です。",
     },
     {
       q: "問い合わせ先は？",
@@ -191,3 +429,8 @@ export const event = {
     },
   ],
 } as const;
+
+export type FeaturedAlumnus =
+  | (typeof event)["guest"]
+  | (typeof event)["souvenir"]["shop"];
+export type AlbumPhoto = (typeof event)["album"]["photos"][number];

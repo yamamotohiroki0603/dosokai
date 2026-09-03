@@ -1,55 +1,17 @@
-import Image from "next/image";
-import Link from "next/link";
-import { event } from "@/lib/event";
+"use client";
 
-export function SiteHeader({
-  ctaHref = "#overview",
-  ctaLabel = "開催概要",
-}: {
-  ctaHref?: string;
-  ctaLabel?: string;
-}) {
-  const isHash = ctaHref.startsWith("#");
-  const CtaTag = isHash ? "a" : Link;
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
-  return (
-    <header className="sticky top-0 z-40 border-b border-[#e8e8e8] bg-white/95 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <Link href="/" className="flex min-w-0 items-center gap-3">
-          <Image
-            src="/brand/h-logo.png"
-            alt={event.schoolName}
-            width={299}
-            height={39}
-            className="h-8 w-auto sm:h-9"
-            priority
-          />
-          <span className="hidden border-l border-[#ddd] pl-3 text-xs tracking-wide text-wine sm:block">
-            {event.reunionName}
-          </span>
-        </Link>
-        <CtaTag
-          href={ctaHref}
-          className="shrink-0 rounded-full bg-wine px-5 py-2 text-xs font-medium tracking-wide text-white transition hover:bg-wine-deep sm:text-sm"
-        >
-          {ctaLabel}
-        </CtaTag>
-      </div>
-    </header>
-  );
-}
+export { SiteHeader } from "@/components/SiteHeader";
 
 export function SiteFooter() {
+  const { event } = useI18n();
   return (
     <footer className="bg-johoku-dark text-white">
       <div className="mx-auto max-w-6xl px-5 py-12 text-center">
-        <Image
-          src="/brand/f-logo.png"
-          alt={event.schoolName}
-          width={231}
-          height={30}
-          className="mx-auto h-7 w-auto"
-        />
+        <p className="font-serif text-lg tracking-[0.12em] text-white">
+          {event.schoolName}
+        </p>
         <p className="mt-3 text-xs tracking-[0.18em] text-white/70">
           {event.reunionName}
         </p>
