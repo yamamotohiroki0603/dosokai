@@ -1,22 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f3eb;
-  --foreground: #3d3428;
+  --background: #ffffff;
+  --foreground: #212121;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-cream: #f7f3eb;
-  --color-cream-dark: #ede6d9;
-  --color-navy: #1b2a4a;
-  --color-navy-deep: #121c33;
-  --color-gold: #c4a35a;
-  --color-gold-light: #e0c98a;
-  --color-ink: #3d3428;
+  --color-paper: #ffffff;
+  --color-paper-dark: #f6f6f6;
+  --color-cream: #f6f6f6;
+  --color-navy: #a72126;
+  --color-navy-deep: #8c1a1e;
+  --color-wine: #a72126;
+  --color-wine-deep: #8c1a1e;
+  --color-gold: #1f3787;
+  --color-gold-light: #eccfd0;
+  --color-ink: #212121;
+  --color-johoku-dark: #1f1f1f;
   --font-sans: var(--font-sans-jp);
-  --font-serif: var(--font-serif-jp);
+  --font-serif: var(--font-mincho);
 }
 
 html {
@@ -26,12 +30,9 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), "Hiragino Sans", sans-serif;
+  font-family: var(--font-sans), "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
 }
 
 .paper-bg {
-  background-color: #f7f3eb;
-  background-image:
-    radial-gradient(ellipse at top, rgba(196, 163, 90, 0.12), transparent 55%),
-    linear-gradient(180deg, #fbf8f2 0%, #f7f3eb 40%, #efe8da 100%);
+  background: #ffffff;
 }
