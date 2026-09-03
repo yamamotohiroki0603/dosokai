@@ -18,6 +18,14 @@ const mincho = Shippori_Mincho({
 export const metadata: Metadata = {
   title: `${event.schoolNameShort} ${event.reunionName}`,
   description: `${event.catchphrase} ${event.dateLabel} ${event.venueName}にて開催。`,
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
