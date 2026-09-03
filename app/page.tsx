@@ -221,22 +221,13 @@ export default function Home() {
           <SectionTitle kicker="CAMPUS">あの学び舎、あの空気</SectionTitle>
           <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2">
             {event.gallery.map((photo) => (
-              <figure
-                key={photo.src}
-                className={
-                  photo.caption === "校歌" ? "overflow-hidden md:col-span-2" : "overflow-hidden"
-                }
-              >
+              <figure key={photo.src} className="overflow-hidden">
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   width={photo.width}
                   height={photo.height}
-                  className={
-                    photo.caption === "校歌"
-                      ? "h-auto w-full bg-[#f6f6f6] object-contain"
-                      : "h-full w-full object-cover"
-                  }
+                  className="h-full w-full object-cover"
                 />
                 <figcaption className="mt-2 text-xs tracking-[0.2em] text-ink/50">
                   {photo.caption}
